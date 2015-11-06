@@ -7,6 +7,7 @@
 //
 
 #import "EVAPaintView.h"
+#import "EVABezierPath.h"
 
 @interface EVAPaintView ()
 
@@ -31,11 +32,12 @@
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    UIBezierPath *path = [UIBezierPath bezierPath];
+    EVABezierPath *path = [EVABezierPath bezierPath];
     self.path = path;
     [self.pathArray addObject:path];
     
     path.lineWidth = self.value;
+    path.color = self.color;
     
     CGPoint point = [self pointWithTouches:touches];
     
@@ -60,11 +62,30 @@
  *  @param rect <#rect description#>
  */
 -(void)drawRect:(CGRect)rect {
+    //如果数组清零
+    if (!self.pathArray.count) return;
+    
      [self.pathArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
 //         [obj setValue:@(self.value)  forKeyPath:@"lineWidth"];  会替换上一次路径的宽度, >不能在这里更改画笔的宽度, 起笔时改
+
+         UIColor *color = [obj valueForKeyPath:@"color"];
+         [color set];
+//         [(UIColor *)[obj valueForKeyPath:@"color"] performSelector:@selector(set)];
          
          [obj stroke];
      }];
+}
+
+-(void)clearScreen {
+    [self.pathArray removeAllObjects];
+    
+    [self setNeedsDisplay];
+}
+
+-(void)undo {
+    [self.pathArray removeLastObject];
+    
+    [self setNeedsDisplay];
 }
 
 

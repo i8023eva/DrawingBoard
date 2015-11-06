@@ -1,5 +1,5 @@
 //
-//  EVAPaintView.h
+//  EVABezierPath.h
 //  DrawingBoard
 //
 //  Created by lyh on 15/11/5.
@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EVAPaintView : UIView
-@property (nonatomic, assign) CGFloat value;
+@interface EVABezierPath : UIBezierPath
 
 @property (nonatomic, strong) UIColor *color;
 
--(void) clearScreen;
--(void) undo;
++ (instancetype)paintPathWithLineWidth:(CGFloat)width color:(UIColor *)color startPoint:(CGPoint)startP;
 @end

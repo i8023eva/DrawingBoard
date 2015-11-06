@@ -14,6 +14,7 @@
 		14A6C7D41BEB845D003B55B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14A6C7D31BEB845D003B55B4 /* Assets.xcassets */; };
 		14A6C7D71BEB845D003B55B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14A6C7D51BEB845D003B55B4 /* LaunchScreen.storyboard */; };
 		14A6C7E01BEB897C003B55B4 /* EVAPaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A6C7DF1BEB897C003B55B4 /* EVAPaintView.m */; };
+		14A6C7E31BEBAB08003B55B4 /* EVABezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A6C7E21BEBAB08003B55B4 /* EVABezierPath.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		14A6C7D81BEB845D003B55B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14A6C7DE1BEB897C003B55B4 /* EVAPaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVAPaintView.h; sourceTree = "<group>"; };
 		14A6C7DF1BEB897C003B55B4 /* EVAPaintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVAPaintView.m; sourceTree = "<group>"; };
+		14A6C7E11BEBAB08003B55B4 /* EVABezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVABezierPath.h; sourceTree = "<group>"; };
+		14A6C7E21BEBAB08003B55B4 /* EVABezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVABezierPath.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				14A6C7C71BEB845D003B55B4 /* Supporting Files */,
 				14A6C7DE1BEB897C003B55B4 /* EVAPaintView.h */,
 				14A6C7DF1BEB897C003B55B4 /* EVAPaintView.m */,
+				14A6C7E11BEBAB08003B55B4 /* EVABezierPath.h */,
+				14A6C7E21BEBAB08003B55B4 /* EVABezierPath.m */,
 			);
 			path = DrawingBoard;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			files = (
 				14A6C7E01BEB897C003B55B4 /* EVAPaintView.m in Sources */,
 				14A6C7CF1BEB845D003B55B4 /* ViewController.m in Sources */,
+				14A6C7E31BEBAB08003B55B4 /* EVABezierPath.m in Sources */,
 				14A6C7CC1BEB845D003B55B4 /* AppDelegate.m in Sources */,
 				14A6C7C91BEB845D003B55B4 /* main.m in Sources */,
 			);
