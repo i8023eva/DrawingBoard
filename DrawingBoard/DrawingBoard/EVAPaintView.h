@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) UIColor *color;
 
+@property (nonatomic, strong) UIImage *image;
+
 -(void) clearScreen;
 -(void) undo;
 @end

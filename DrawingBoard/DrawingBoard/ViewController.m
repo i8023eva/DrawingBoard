@@ -8,8 +8,10 @@
 
 #import "ViewController.h"
 #import "EVAPaintView.h"
+#import "MBProgressHUD+MJ.h"
+#import "EVAHandleImageView.h"
 
-@interface ViewController ()
+@interface ViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet EVAPaintView *paintView;
 
 @end
@@ -34,15 +36,50 @@
 //  - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo;
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
     if (error) {//保存失败
-        
+        [MBProgressHUD showError:@"保存失败"];
     }else {//保存成功
-        
+        [MBProgressHUD showSuccess:@"保存成功"];
     }
 }
 
-
+#pragma mark - 用户相册
 - (IBAction)selectPhoto:(UIBarButtonItem *)sender {
+    //照片选择器
+    UIImagePickerController *picker = [[UIImagePickerController alloc]init];
+    //数据源  ---用户相册  UIImagePickerControllerSourceTypePhotoLibrary
+    //  ---相册列表  UIImagePickerControllerSourceTypeSavedPhotosAlbum
+    //  ---照相机  UIImagePickerControllerSourceTypeCamera
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    picker.delegate = self;
+    
+    [self presentViewController:picker animated:YES completion:nil];
 }
+#pragma mark - UIImagePickerControllerDelegate
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    /**
+    info {
+     UIImagePickerControllerMediaType = "public.image";
+     UIImagePickerControllerOriginalImage = "<UIImage: 0x7fc4f5870440> size {3000, 2002} orientation 0 scale 1.000000";
+     UIImagePickerControllerReferenceURL = "assets-library://asset/asset.JPG?id=45EC6936-8F0D-4FA7-B9F6-691A995AE25E&ext=JPG";
+     }
+     */
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    
+    EVAHandleImageView *imageView = [[EVAHandleImageView alloc]initWithFrame:self.paintView.frame];
+    
+    imageView.image = image;
+    
+    [self.view addSubview:imageView];
+    
+//    self.paintView.image = image;
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+//    NSLog(@"%@", info);
+}
+
+
 
 - (IBAction)eraser:(UIBarButtonItem *)sender {
     self.paintView.color = [UIColor colorWithWhite:0.902 alpha:1.000];

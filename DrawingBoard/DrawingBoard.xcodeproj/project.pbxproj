@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		021D4176311F7A643B992145 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1BAF2B1754D60292C5FCB3 /* libPods.a */; };
 		140EB6351BEC57FD00E61A81 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 140EB6341BEC57FD00E61A81 /* MBProgressHUD+MJ.m */; };
+		140EB6381BEC91DA00E61A81 /* EVAHandleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140EB6371BEC91DA00E61A81 /* EVAHandleImageView.m */; };
+		140EB63B1BECCC7400E61A81 /* UIImage+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 140EB63A1BECCC7400E61A81 /* UIImage+Tool.m */; };
 		14A6C7C91BEB845D003B55B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A6C7C81BEB845D003B55B4 /* main.m */; };
 		14A6C7CC1BEB845D003B55B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A6C7CB1BEB845D003B55B4 /* AppDelegate.m */; };
 		14A6C7CF1BEB845D003B55B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A6C7CE1BEB845D003B55B4 /* ViewController.m */; };
@@ -22,6 +24,10 @@
 /* Begin PBXFileReference section */
 		140EB6331BEC57FD00E61A81 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		140EB6341BEC57FD00E61A81 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		140EB6361BEC91DA00E61A81 /* EVAHandleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVAHandleImageView.h; sourceTree = "<group>"; };
+		140EB6371BEC91DA00E61A81 /* EVAHandleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVAHandleImageView.m; sourceTree = "<group>"; };
+		140EB6391BECCC7400E61A81 /* UIImage+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tool.h"; sourceTree = "<group>"; };
+		140EB63A1BECCC7400E61A81 /* UIImage+Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tool.m"; sourceTree = "<group>"; };
 		14A6C7C41BEB845D003B55B4 /* DrawingBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A6C7C81BEB845D003B55B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14A6C7CA1BEB845D003B55B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,6 +82,8 @@
 			children = (
 				140EB6331BEC57FD00E61A81 /* MBProgressHUD+MJ.h */,
 				140EB6341BEC57FD00E61A81 /* MBProgressHUD+MJ.m */,
+				140EB6391BECCC7400E61A81 /* UIImage+Tool.h */,
+				140EB63A1BECCC7400E61A81 /* UIImage+Tool.m */,
 				14A6C7CA1BEB845D003B55B4 /* AppDelegate.h */,
 				14A6C7CB1BEB845D003B55B4 /* AppDelegate.m */,
 				14A6C7CD1BEB845D003B55B4 /* ViewController.h */,
@@ -89,6 +97,8 @@
 				14A6C7DF1BEB897C003B55B4 /* EVAPaintView.m */,
 				14A6C7E11BEBAB08003B55B4 /* EVABezierPath.h */,
 				14A6C7E21BEBAB08003B55B4 /* EVABezierPath.m */,
+				140EB6361BEC91DA00E61A81 /* EVAHandleImageView.h */,
+				140EB6371BEC91DA00E61A81 /* EVAHandleImageView.m */,
 			);
 			path = DrawingBoard;
 			sourceTree = "<group>";
@@ -243,6 +253,8 @@
 			files = (
 				140EB6351BEC57FD00E61A81 /* MBProgressHUD+MJ.m in Sources */,
 				14A6C7E01BEB897C003B55B4 /* EVAPaintView.m in Sources */,
+				140EB6381BEC91DA00E61A81 /* EVAHandleImageView.m in Sources */,
+				140EB63B1BECCC7400E61A81 /* UIImage+Tool.m in Sources */,
 				14A6C7CF1BEB845D003B55B4 /* ViewController.m in Sources */,
 				14A6C7E31BEBAB08003B55B4 /* EVABezierPath.m in Sources */,
 				14A6C7CC1BEB845D003B55B4 /* AppDelegate.m in Sources */,

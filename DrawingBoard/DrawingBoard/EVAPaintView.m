@@ -18,6 +18,10 @@
 
 @implementation EVAPaintView
 
+-(void)setImage:(UIImage *)image {
+    _image = image;
+}
+
 -(NSMutableArray *)pathArray {
     if (_pathArray == nil) {
         _pathArray = [NSMutableArray array];
@@ -67,6 +71,11 @@
     
      [self.pathArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
 //         [obj setValue:@(self.value)  forKeyPath:@"lineWidth"];  会替换上一次路径的宽度, >不能在这里更改画笔的宽度, 起笔时改
+         
+         if ([obj isKindOfClass:[UIImage class]]) {
+             UIImage *image = obj;
+             [image drawAtPoint:CGPointZero];
+         }
 
          UIColor *color = [obj valueForKeyPath:@"color"];
          [color set];
